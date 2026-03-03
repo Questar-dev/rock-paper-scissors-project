@@ -9,15 +9,17 @@
   <body>
     <div class="container">
       <p class="rps-title">Rock Paper Scissors</p>
-      <button class="play-btn" onclick="play('rock')">
-        <img class="emoji" src="./rock-emoji.png" alt="rock-emoji" />
-      </button>
-      <button class="play-btn" onclick="play('paper')">
-        <img class="emoji" src="./paper-emoji.png" alt="paper-emoji" />
-      </button>
-      <button class="play-btn" onclick="play('scissors')">
-        <img class="emoji" src="./scissors-emoji.png" alt="scissors-emoji" />
-      </button>
+      <div class="move-btns">
+        <button class="play-btn" onclick="play('rock')">
+          <img class="emoji" src="./rock-emoji.png" alt="rock-emoji" />
+        </button>
+        <button class="play-btn" onclick="play('paper')">
+          <img class="emoji" src="./paper-emoji.png" alt="paper-emoji" />
+        </button>
+        <button class="play-btn" onclick="play('scissors')">
+          <img class="emoji" src="./scissors-emoji.png" alt="scissors-emoji" />
+        </button>
+      </div>
 
       <p id="result"></p>
       <p id="status"></p>

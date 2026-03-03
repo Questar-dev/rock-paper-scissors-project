@@ -48,6 +48,8 @@ body {
 
 .container {
   position: absolute;
+  display: flex;
+  flex-direction: column;
   left: 50%;
   top: 50%;
   transform: translate(-50%, -50%);
@@ -93,6 +95,14 @@ body {
     background-color: transparent;
     border-radius: 12px;
     transition: all .2s linear;
+    width: 100px;
+  }
+  .container {
+    width: 250px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
   }
 
 }
