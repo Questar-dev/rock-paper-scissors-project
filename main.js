@@ -9,10 +9,9 @@ let score = JSON.parse(localStorage.getItem("score")) || {
 showScore();
 
 function play(yourChoice) {
-  let arr = ["rock", "scissors", "paper"];
+  const arr = ["rock", "scissors", "paper"];
   let compChoice = arr[Math.ceil(Math.random() * 3) - 1];
 
-  let result;
 
   const emojies = {
     rock: '<img class="emoji" src="./rock-emoji.png" alt="rock-emoji" />',
@@ -92,3 +91,26 @@ function showScore() {
   document.querySelector("#score").innerHTML =
     `Win: ${score.win}, Loose: ${score.loose}, Tie: ${score.tie}`;
 }
+
+
+let interavlID;
+function autoPlay(){
+  const autoPlayElem = document.querySelector('.js-auto-play')
+
+  if (autoPlayElem.innerHTML === 'Stop Play'){
+    clearInterval(interavlID)
+    autoPlayElem.innerHTML = 'Auto Play'
+    
+  } else {
+    interavlID = setInterval(function(){
+    play(["rock", "scissors", "paper"][Math.ceil(Math.random() * 3) - 1])
+  }
+    , 1000
+  );
+  autoPlayElem.innerHTML = "Stop Play"
+  }
+
+  
+
+}
+

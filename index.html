@@ -8,7 +8,7 @@
   </head>
   <body>
     <div class="container">
-      <p class="rps-title">Rock Paper Scissors</p>
+      <p class="rps-title">Mohamed's Game</p>
       <div class="move-btns">
         <button class="play-btn" onclick="play('rock')">
           <img class="emoji" src="./rock-emoji.png" alt="rock-emoji" />
@@ -24,9 +24,14 @@
       <p id="result"></p>
       <p id="status"></p>
       <p id="score"></p>
-      <button class="rest-btn" onclick="updateScore('reset')">
-        Reset Score
-      </button>
+      <div class="play-btns-cont">
+        <button class="rest-btn" onclick="updateScore('reset')">
+          Reset Score
+        </button>
+        <button class="js-auto-play auto-play" onclick="autoPlay()">
+          Auto Play
+        </button>
+      </div>
     </div>
 
     <script src="./main.js"></script>
