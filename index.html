@@ -10,13 +10,13 @@
     <div class="container">
       <p class="rps-title">Mohamed's Game</p>
       <div class="move-btns">
-        <button class="play-btn" onclick="play('rock')">
+        <button class="js-rock-btn play-btn">
           <img class="emoji" src="./rock-emoji.png" alt="rock-emoji" />
         </button>
-        <button class="play-btn" onclick="play('paper')">
+        <button class="js-paper-btn play-btn">
           <img class="emoji" src="./paper-emoji.png" alt="paper-emoji" />
         </button>
-        <button class="play-btn" onclick="play('scissors')">
+        <button class="js-scissors-btn play-btn">
           <img class="emoji" src="./scissors-emoji.png" alt="scissors-emoji" />
         </button>
       </div>
@@ -25,12 +25,8 @@
       <p id="status"></p>
       <p id="score"></p>
       <div class="play-btns-cont">
-        <button class="rest-btn" onclick="updateScore('reset')">
-          Reset Score
-        </button>
-        <button class="js-auto-play auto-play" onclick="autoPlay()">
-          Auto Play
-        </button>
+        <button class="js-rest-btn rest-btn">Reset Score</button>
+        <button class="js-auto-play auto-play">Auto Play</button>
       </div>
     </div>
 

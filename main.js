@@ -8,6 +8,34 @@ let score = JSON.parse(localStorage.getItem("score")) || {
 
 showScore();
 
+
+const rockBtnElem = document.querySelector('.js-rock-btn')
+const paperBtnElem = document.querySelector('.js-paper-btn')
+const scissorsBtnElem = document.querySelector('.js-scissors-btn')
+
+const restBtnElem = document.querySelector('.rest-btn')
+const autoPlayBtnElem = document.querySelector('.js-auto-play')
+
+
+rockBtnElem.addEventListener('click', () => {
+  play('rock')
+})
+paperBtnElem.addEventListener('click', () => {
+  play('paper')
+})
+scissorsBtnElem.addEventListener('click', () => {
+  play('scissors')
+})
+
+restBtnElem.addEventListener('click', () => {
+  updateScore('reset')
+})
+autoPlayBtnElem.addEventListener('click', () => {
+  autoPlay()
+})
+
+
+
 function play(yourChoice) {
   const arr = ["rock", "scissors", "paper"];
   let compChoice = arr[Math.ceil(Math.random() * 3) - 1];
@@ -102,15 +130,13 @@ function autoPlay(){
     autoPlayElem.innerHTML = 'Auto Play'
     
   } else {
-    interavlID = setInterval(function(){
+    interavlID = setInterval(() => {
     play(["rock", "scissors", "paper"][Math.ceil(Math.random() * 3) - 1])
   }
     , 1000
   );
   autoPlayElem.innerHTML = "Stop Play"
   }
-
-  
 
 }
 
