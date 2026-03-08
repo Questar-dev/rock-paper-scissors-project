@@ -37,7 +37,7 @@ autoPlayBtnElem.addEventListener('click', () => {
 
 // Event Listener on keydown
 
-document.body.addEventListener('keydown', () => {
+document.body.addEventListener('keydown', (event) => {
   if (event.key === 'r'){
     play('rock')
   } else if (event.key === 'p'){
