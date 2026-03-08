@@ -35,6 +35,20 @@ autoPlayBtnElem.addEventListener('click', () => {
 })
 
 
+// Event Listener on keydown
+
+document.body.addEventListener('keydown', () => {
+  if (event.key === 'r'){
+    play('rock')
+  } else if (event.key === 'p'){
+    play('paper')
+  } else if (event.key === 's'){
+    play('scissors')
+  }
+})
+
+
+
 
 function play(yourChoice) {
   const arr = ["rock", "scissors", "paper"];
